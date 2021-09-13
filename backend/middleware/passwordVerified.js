@@ -1,4 +1,4 @@
-const passwordSchema = require('../models/password');
+const passwordSchema = require('../models/mtDePasse');
 
 
 module.exports = (req, res, next) => {
