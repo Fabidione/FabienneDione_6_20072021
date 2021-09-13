@@ -5,7 +5,7 @@ const userCtrl = require('../controllers/user');
 const verifyPassword = require('../middleware/passwordVerified');
 
 
-router.post('/signup', passwordVerified, userCtrl.signup);
+router.post('/signup', verifyPassword, userCtrl.signup);
 router.post('/login', userCtrl.login);
 
 module.exports = router;
