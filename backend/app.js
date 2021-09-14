@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const helmet = require('helmet');
-const session = require('cookie-session');
 const nocache = require('nocache');
 
 const sauceRoutes = require('./routes/sauce');
