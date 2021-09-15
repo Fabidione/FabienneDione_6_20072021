@@ -13,11 +13,9 @@ require('dotenv').config();
 
 //connection de l'api à la base de donnée//
 mongoose
-  .connect(
-    "mongodb+srv://fadione:Anna1954@cluster0.84czk.mongodb.net/piiquante?retryWrites=true&w=majority",
+  .connect( process.env.DB_URI,
     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true,
-    }
-  )
+    })
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch(() => console.log("Connexion à MongoDB échouée !"));
 
