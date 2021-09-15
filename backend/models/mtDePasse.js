@@ -1,12 +1,12 @@
-const passwordValidator = require('password-validator');
+// const passwordValidator = require('password-validator');
 
-const passwordSchema = new passwordValidator();
+// const passwordSchema = new passwordValidator();
 
-passwordSchema
-.is().min(8)                                   
-.has().uppercase()                             
-.has().lowercase()                              
-.has().not().spaces()                           
-.is().not().oneOf(['Passw0rd', 'Password123']); 
+// passwordSchema
+// .is().min(8)                                   
+// .has().uppercase()                             
+// .has().lowercase()                              
+// .has().not().spaces()                           
+// .is().not().oneOf(['Passw0rd', 'Password123']); 
 
-module.exports = passwordSchema;
+// module.exports = passwordSchema;

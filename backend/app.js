@@ -3,9 +3,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 
-const helmet = require('helmet');
-const session = require('cookie-session');
-const nocache = require('nocache');
+//const helmet = require('helmet');
+////const nocache = require('nocache');
 
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
@@ -37,8 +36,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-app.use(helmet());
-app.use(nocache());
+//app.use(helmet());
+//app.use(nocache());
 
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
