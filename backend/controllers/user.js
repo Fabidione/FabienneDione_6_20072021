@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 // permet l'échange sécurisé de tokens et la vérification de l'intégrité et de l'authenticité des données
 const jwt = require('jsonwebtoken');
 
-//const User = require ("../models/user");
+const User = require ("../models/user");
 
 //connexion de l'utilisation
 exports.signup = (req, res, next) => {
