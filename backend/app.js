@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
 
-//const helmet = require('helmet');
+const helmet = require('helmet');
 ////const nocache = require('nocache');
 
 const sauceRoutes = require('./routes/sauce');
@@ -13,11 +13,9 @@ require('dotenv').config();
 
 //connection de l'api à la base de donnée//
 mongoose
-  .connect(
-    "mongodb+srv://fadione:Anna1954@cluster0.84czk.mongodb.net/piiquante?retryWrites=true&w=majority",
+  .connect( process.env.DB_URI,
     { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true,
-    }
-  )
+    })
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch(() => console.log("Connexion à MongoDB échouée !"));
 
@@ -36,7 +34,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-//app.use(helmet());
+app.use(helmet());
 //app.use(nocache());
 
 

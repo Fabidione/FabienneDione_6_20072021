@@ -1,4 +1,5 @@
-const sauce = require('../models/sauce');
+const sauce = require('../models/sauce')
+//permet de modifier le système de fichiers, y compris aux fonctions permettant de supprimer les fichiers.
 const fs = require('fs');
 
 // création d'une nouvelle sauce//
