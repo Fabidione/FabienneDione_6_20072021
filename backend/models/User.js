@@ -8,7 +8,7 @@ const userSchema = mongoose.Schema({
   email: { type: String, 
     required: [ true, "Please enter your email address"],
     unique: true ,
-    validate: [validator.isEmail, { error: 'adresse mail non valide' }]  
+    validate: [validator.isEmail, { error: 'Adresse mail non valide' }]  
   },
   password: { type: String, 
     required: [true, "Please choose a password"]
